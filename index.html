@@ -1,3 +1,4 @@
+<!--Useful elements//attributes when using forms-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,17 +7,83 @@
     <title>Form</title>
 </head>
 <body>
-    <form>
+    <!--"action" where form data is going | Method-Post involves server-->
+    <form action="results.html" method="get" enctype="multipart/form-data">
         <div>
-            <label>Name</label>
-            <input>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="email" min="13" max="200" step="1">
+        </div>
+        <div>
+            <label for="date">Birthdate</label>
+            <input type="date" name="date" id="date" min="04/17/2011">
+        </div>
+        <div>
+            Favorite Food
+            <div>
+                <label for="pizza">Pizza</label>
+                <input type="checkbox" name="pizza" id="pizza">
+            </div>
+            <div>
+                <label for="spaghetti">Spaghetti</label>
+                <input type="checkbox" name="spaghetti" id="spaghetti">
+            </div>
+        </div>
+        <div>
+            Gender
+            <div>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+            </div>
+            <div>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </div>
+        </div>
+        <div>
+            <label for="eyeColor">Eye Color</label>
+            <select name="eyeColor" id="eyeColor">
+                <option value="Green">Green</option>
+                <option label=option value="Red"></option>
+            </select>
+        </div>
+        <div>
+            <label for="bio">Bio</label>
+            <textarea id="bio" name="bio"></textarea>
+        </div>
+        <!--Hidden attribute used w/ js-->
+        <input type="hidden" name="hidden" value="hi">
+        <div>
+            <label for="file">File</label>
+            <input id="file" name="file" type="file"></input>
+        </div>
+        <div>
+            <label for="url">URL</label>
+            <input id="color" name="color" type="color"></input>
+        </div>
+        <div>
+            <label for="color">Color</label>
+            <input id="url" name="url" type="url"></input>
+        </div>
+        <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel"></input>
         </div>
         <div>
             <label>Password</label>
-            <input>
+            <input type="password" name="password" required>
         </div>
         <div>
-            <button>Submit</button>
+            <!--Reset attribute clears input entered, required makes it mandatory to be entered-->
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
         </div>
     </form>
 </body>
